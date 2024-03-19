@@ -1,0 +1,5 @@
+export {default as home} from './Home'
+export {default as login} from './Login'
+export {default as register} from './Register'
+export {default as quotes} from './Quotes'
+export {default as dashboard} from './Dashboard'
