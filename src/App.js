@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import RequireAuth from './auth/auth'
 import {Home, Login, Quotes, Register, Dashboard} from './pages'
+import Layout from './components/Layout/Layout'
 
 function App() {
 
@@ -16,7 +17,8 @@ function App() {
     <div className="App">
       <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />}>
+      <Route element={<Layout />}>
+          <Route path="/home" element={<Home />} />
           <Route path="/quotes" element={<Quotes />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
@@ -27,8 +29,9 @@ function App() {
                 <Dashboard />
               </RequireAuth>
             }
-          />
-        </Route>
+            />
+      
+            </Route>
       </Routes>
       </BrowserRouter>
 
